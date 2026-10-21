@@ -2,6 +2,8 @@
 
 This is the how-to for **[solana-xdp-check.sh](solana-xdp-check.sh)**. The script is self-contained, checks the local Linux server, displays progress and writes **one new text report in the directory you run it from**. This README is optional reading, not a script dependency.
 
+To test individual items without running the script, use **[COMMANDS.md — individual read-only checks](COMMANDS.md)**. Each check includes its command, what to look for and how to interpret the result. It prints to the terminal and creates no report.
+
 The script **does not tune anything**. It does not grant capabilities, reset XDP, change interfaces, load BPF programs, install packages, restart the validator or make RPC requests. Commands below marked **CHANGE** are manual examples for a specifically approved change. No production changes have been applied.
 
 Start with the result, establish its cause, change one justified setting, and measure again. A missing observation is not proof that a setting needs changing. There is no universal best queue count, CPU mask, ring size or buffer size.
